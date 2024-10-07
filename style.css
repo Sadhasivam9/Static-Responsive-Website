@@ -41,4 +41,42 @@ body {
   footer p {
     margin: 0;
   }
+  /* Internship Section Styles */
+.internship-section {
+    padding: 50px 0;
+  }
+  
+  .internship-item {
+    margin-bottom: 30px;
+  }
+  
+  .internship-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+  }
+  
+  /* Ensure responsive behavior for smaller screens */
+  @media (max-width: 768px) {
+    .internship-item {
+      text-align: center; /* Center content for mobile */
+    }
+  
+    .card-body {
+      padding: 15px;
+    }
+  
+    .internship-img {
+      object-fit: contain; /* Ensure the whole image is visible */
+      max-height: 200px; /* Adjust the image height for mobile */
+    }
+  
+    .card-body h3 {
+      font-size: 1.5rem; /* Adjust title size for mobile */
+    }
+  
+    .btn-primary {
+      margin-top: 10px;
+    }
+  }
   
