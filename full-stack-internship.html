@@ -12,13 +12,23 @@
         }
         .hero-section {
             background-image: url('https://www.innomatics.in/wp-content/uploads/2024/09/full-stack-internship.jpg');
-            background-size: cover;
+            background-size: cover; /* Make sure the image covers the area proportionally */
             background-position: center;
-            height: 60vh;
+            background-repeat: no-repeat;
+            height: 80vh;
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 50vh; /* Adjust height for mobile devices */
+                background-size: contain; /* Make the image fit properly on mobile */
+            }
         }
     </style>
 </head>
@@ -27,8 +37,6 @@
 <!-- Hero Section -->
 <section class="hero-section">
     <div class="container text-center">
-       <!--- <h1 class="display-4">Full Stack Development Internship</h1>
-        <p>Upskill with India’s Biggest Free Full Stack Development Internship</p>-->
     </div>
 </section>
 

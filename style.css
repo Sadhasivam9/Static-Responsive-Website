@@ -1,82 +1,116 @@
 /* Change the background color of the navbar */
 .navbar {
-    background-color: #d11313; /* Replace with your preferred background color */
-  }
-  
-  /* Ensure the logo image is not affected */
-  .navbar-logo {
-    background-color: transparent; /* Ensure no background is applied */
-    width: 150px; /* Adjust the size of the logo if needed */
-  }
-  
-  /* Additional styling for hover or focus states if necessary */
-  .navbar-brand:hover .navbar-logo {
-    background-color: transparent;
-  }
-    
+    background-color: #d11313; /* Consistent background color for the navbar */
+}
+
+/* Ensure the logo image is not affected */
+.navbar-logo {
+    background-color: transparent; /* No background color for the logo */
+    width: 150px; /* Adjust the size of the logo if necessary */
+}
+
+/* Hover effect for the logo */
+.navbar-brand:hover .navbar-logo {
+    background-color: transparent; /* Keeps the logo transparent even on hover */
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-  }
-  
-  .hero-section {
-    background-size: cover;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* To ensure padding and borders are included in the total width and height */
+}
+
+/* Hero section with responsive background image */
+.hero-section {
+    background-size: cover; /* Ensure the background image covers the section while maintaining its aspect ratio */
     background-position: center;
+    background-repeat: no-repeat;
     padding: 100px 0;
     color: white;
-  }
+    text-align: center;
+}
 
-  .btn-primary {
+/* Button primary styling */
+.btn-primary {
     background-color: #007bff;
     border-color: #007bff;
-  }
-  
-  .card {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Card styling */
+.card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  footer {
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Hover effect for cards */
+}
+
+/* Footer styling */
+footer {
     background-color: #343a40;
-  }
-  
-  footer p {
+    padding: 20px 0;
+}
+
+footer p {
     margin: 0;
-  }
-  /* Internship Section Styles */
+    color: #fff; /* White text in footer */
+    text-align: center;
+}
+
+/* Internship Section Styles */
 .internship-section {
     padding: 50px 0;
-  }
-  
-  .internship-item {
+    background-color: #f8f9fa;
+}
+
+/* Internship item card styling */
+.internship-item {
     margin-bottom: 30px;
-  }
-  
-  .internship-img {
+}
+
+.internship-img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
-  }
-  
-  /* Ensure responsive behavior for smaller screens */
-  @media (max-width: 768px) {
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+}
+
+/* Ensure responsive behavior for smaller screens */
+@media (max-width: 768px) {
     .internship-item {
-      text-align: center; /* Center content for mobile */
+        text-align: center; /* Center content for mobile */
     }
-  
+
     .card-body {
-      padding: 15px;
+        padding: 15px;
     }
-  
+
     .internship-img {
-      object-fit: contain; /* Ensure the whole image is visible */
-      max-height: 200px; /* Adjust the image height for mobile */
+        object-fit: contain; /* Ensure the whole image is visible on mobile */
+        max-height: 200px; /* Limit image height for mobile responsiveness */
     }
-  
+
     .card-body h3 {
-      font-size: 1.5rem; /* Adjust title size for mobile */
+        font-size: 1.5rem; /* Adjust title size for mobile */
     }
-  
+
     .btn-primary {
-      margin-top: 10px;
+        margin-top: 10px;
+        width: 100%; /* Make button full-width on smaller screens */
     }
-  }
-  
+}
+
+/* Additional responsiveness tweaks for even smaller devices */
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 50px 0;
+        font-size: 14px; /* Reduce font size for very small screens */
+    }
+
+    .card-body h3 {
+        font-size: 1.2rem; /* Further adjust title size for very small screens */
+    }
+}
